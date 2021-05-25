@@ -1,0 +1,41 @@
+.btn {
+  @include reset-btn;
+
+  font-family: $font-family--main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: $color-black;
+
+
+  padding: 12px 36px;
+  background-color: $color-gray-2;
+  border: 1px solid $color-gray-4;
+  border-radius: 2px;
+  transition: color $default-transition-settings, background-color $default-transition-settings;
+}
+
+.btn--grey {
+
+  @media (hover: hover),
+  screen and (min-width: 0\0) {
+
+    &:hover,
+    &:focus {
+      background-color: $color-gray-4;
+    }
+  }
+
+  &:active {
+    background-color: $color-gray-2;
+    border: 1px solid $color-gray-4;
+  }
+
+  &:disabled {
+    color: rgba($color-black, 0.5);
+    background-color: rgba($color-gray-2, 0.5);
+    cursor: default;
+  }
+}

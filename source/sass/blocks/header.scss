@@ -1,32 +1,63 @@
 .header {
   display: flex;
-  align-items: center;
-  min-height: 100px;
-  padding: 0 40px;
+  flex-direction: column;
 
-  background-color: $color-blue;
+  &__top {
+    padding: 24px 0;
+    border-bottom: 1px solid $color-gray-4;
 
-  &__wrapper {
-    display: flex;
-    align-items: center;
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
-  a,
-  p {
-    color: $color-white;
-  }
-
-  ul {
-    display: flex;
-    margin: 0;
+  &__logo {
+    flex-shrink: 0;
     margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
 
-    list-style: none;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 
-    li {
-      margin-right: 20px;
+  &__contacts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 20px;
+  }
+
+  &__link {
+    margin-right: 40px;
+    padding: 10px 0;
+    font-family: $font-family--main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: $color-black;
+    transition: color $default-transition-settings;
+
+    svg {
+      margin-left: 4px;
+      fill: $color-black;
+      transition: fill $default-transition-settings;
+    }
+
+    &:hover {
+      color: $color-gray-1;
+
+      svg {
+        fill: $color-gray-1;
+      }
+    }
+
+    &--select {
+      display: flex;
+      align-items: center;
     }
   }
 

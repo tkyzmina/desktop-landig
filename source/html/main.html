@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
   @@include("source/html/base/head.html")
   <title>ProjectName — Главная</title>
 
 </head>
+
 <body>
 
   <div style="display: none;">
@@ -14,7 +16,8 @@
 
   <div class="wrapper">
     @@include("source/html/base/header.html", {
-      "main": true
+    "main": true,
+    "headerActiveLinkIndex": 1,
     })
 
     <main>
@@ -27,18 +30,19 @@
     @@include("source/html/base/footer.html")
 
     @@include("source/html/base/modal.html", {
-      "name": "feedback"
+    "name": "feedback"
     })
 
     @@include("source/html/base/modal.html", {
-      "name": "success",
-      "fitContent": true,
-      "noScale": true,
-      "mod": "some-mod"
+    "name": "success",
+    "fitContent": true,
+    "noScale": true,
+    "mod": "some-mod"
     })
   </div>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

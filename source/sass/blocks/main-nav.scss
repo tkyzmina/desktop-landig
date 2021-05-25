@@ -1,0 +1,46 @@
+.main-nav {
+
+  &__wrapper {
+    padding: 23px 0;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 50px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-family: $font-family--main;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: $color-gray-5;
+    cursor: pointer;
+    transition: color $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      color: $color-gray-1;
+    }
+
+    &:active {
+      color: $color-gray-5;
+    }
+
+    &--active {
+      color: $color-orange;
+    }
+  }
+}
