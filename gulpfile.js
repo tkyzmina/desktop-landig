@@ -14,7 +14,7 @@ const del = require("del");
 const webpackStream = require("webpack-stream");
 const webpackConfig = require("./webpack.config.js");
 const fileinclude = require("gulp-file-include");
-var ghPages = require("gulp-gh-pages");
+const ghPages = require("gulp-gh-pages");
 
 const html = () => {
   return gulp
@@ -158,7 +158,7 @@ const start = gulp.series(build, syncserver);
 // Вызывайте через 'npm run taskName'
 
 gulp.task("deploy", function () {
-  return gulp.src("./dist/**/*").pipe(ghPages());
+  return gulp.src("./build/**/*").pipe(ghPages());
 });
 
 const createWebp = () => {
