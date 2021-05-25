@@ -14,7 +14,7 @@ const del = require("del");
 const webpackStream = require("webpack-stream");
 const webpackConfig = require("./webpack.config.js");
 const fileinclude = require("gulp-file-include");
-const ghPages = require("gulp-gh-pages");
+var ghPages = require("gulp-gh-pages");
 
 const html = () => {
   return gulp
