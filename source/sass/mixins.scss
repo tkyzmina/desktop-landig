@@ -65,3 +65,16 @@
   outline: none;
   cursor: pointer;
 }
+
+@mixin h1 {
+  font-weight: 700;
+  font-size: 66px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: $color-default-white;
+
+  em {
+    font-style: normal;
+    color: $color-orange;
+  }
+}
