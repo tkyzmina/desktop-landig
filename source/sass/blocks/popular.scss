@@ -5,7 +5,21 @@
 
   &__title {
     @include h2;
+    margin-bottom: 30px;
   }
 
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
 
+  .product-card {
+    margin: 0 20px 20px;
+    width: calc(100% / 3 - 40px);
+
+    @media (max-width: $viewport--lg) {
+      width: calc(100% / 2 - 40px);
+    }
+  }
 }
