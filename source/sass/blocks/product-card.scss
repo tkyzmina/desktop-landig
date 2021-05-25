@@ -1,0 +1,45 @@
+.product-card {
+  &__content {
+    padding: 10px 15px;
+    background-color: $color-default-white;
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__list {
+    margin: 0;
+  }
+
+  &__list-title {
+    padding: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: $color-gray-1;
+
+    &--confirm {
+      position: relative;
+      padding-left: 35px;
+      font-size: 16px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 1;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        background-image: url("../img/svg/tick.svg");
+      }
+    }
+  }
+
+  &__list-descr {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: $color-black;
+  }
+}

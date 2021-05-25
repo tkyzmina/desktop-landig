@@ -1,0 +1,11 @@
+.popular {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $color-alice-blue;
+
+  &__title {
+    @include h2;
+  }
+
+
+}

@@ -1172,6 +1172,57 @@ button,
     font-size: 16px;
     line-height: 19px; }
 
+.popular {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f6f8fd; }
+  .popular__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 41px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #231f20; }
+    .popular__title em {
+      font-style: normal;
+      color: #ff8000; }
+
+.product-card__content {
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px; }
+
+.product-card__list {
+  margin: 0; }
+
+.product-card__list-title {
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #575757; }
+  .product-card__list-title--confirm {
+    position: relative;
+    padding-left: 35px;
+    font-size: 16px; }
+    .product-card__list-title--confirm::before {
+      position: absolute;
+      content: "";
+      top: 1;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-image: url("../img/svg/tick.svg"); }
+
+.product-card__list-descr {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #231f20; }
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
