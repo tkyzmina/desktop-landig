@@ -1,6 +1,7 @@
 .btn {
   @include reset-btn;
 
+  display: inline-flex;
   font-family: $font-family--main;
   font-style: normal;
   font-weight: 500;
@@ -8,6 +9,7 @@
   line-height: 16px;
   letter-spacing: 0.01em;
   color: $color-black;
+  text-align: center;
 
 
   padding: 12px 36px;
@@ -51,7 +53,7 @@
   line-height: 19px;
   background-color: $color-red-2;
   border: 1px solid $color-red-2;
-  color: $color-black;
+  color: $color-default-white;
 
   &:hover,
   &:focus {
@@ -62,7 +64,7 @@
 
   &:active {
     background-color: $color-red-2;
-    color: $color-black;
+    color: $color-default-white;
   }
 }
 
@@ -81,4 +83,10 @@
     background-color: $color-default-white;
     color: $color-red-2;
   }
+}
+
+.btn--white {
+  color: $color-default-white;
+  background-color: transparent;
+  border: 1px solid $color-default-white;
 }

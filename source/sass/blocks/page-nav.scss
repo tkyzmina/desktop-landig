@@ -1,7 +1,7 @@
 .page-nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 10px;
 
   &__list {
@@ -9,6 +9,7 @@
     margin: 0;
     margin-right: 20px;
     padding: 0;
+    padding-top: 12px;
     list-style: none;
   }
 
@@ -21,6 +22,7 @@
   }
 
   &__link {
+    display: block;
     padding-bottom: 25px;
     font-weight: 500;
     font-size: 14px;

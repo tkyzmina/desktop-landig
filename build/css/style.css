@@ -718,6 +718,9 @@ button,
   border: none;
   outline: none;
   cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -725,6 +728,7 @@ button,
   line-height: 16px;
   letter-spacing: 0.01em;
   color: #231f20;
+  text-align: center;
   padding: 12px 36px;
   background-color: #f2f2f2;
   border: 1px solid #ededed;
@@ -754,14 +758,14 @@ button,
   line-height: 19px;
   background-color: #a30000;
   border: 1px solid #a30000;
-  color: #231f20; }
+  color: #ffffff; }
   .btn--red:hover, .btn--red:focus {
     background-color: #ffffff;
     border: 1px solid #a30000;
     color: #a30000; }
   .btn--red:active {
     background-color: #a30000;
-    color: #231f20; }
+    color: #ffffff; }
 
 .btn--transparent {
   color: #a30000;
@@ -773,6 +777,11 @@ button,
   .btn--transparent:active {
     background-color: #ffffff;
     color: #a30000; }
+
+.btn--white {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff; }
 
 .main-nav__wrapper {
   padding: 23px 0; }
@@ -888,9 +897,9 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding-top: 10px; }
   .page-nav__list {
     display: -webkit-box;
@@ -899,12 +908,14 @@ button,
     margin: 0;
     margin-right: 20px;
     padding: 0;
+    padding-top: 12px;
     list-style: none; }
   .page-nav__item {
     margin-right: 35px; }
     .page-nav__item:last-of-type {
       margin-right: 0; }
   .page-nav__link {
+    display: block;
     padding-bottom: 25px;
     font-weight: 500;
     font-size: 14px;
@@ -923,6 +934,7 @@ button,
 
 .series {
   padding-top: 115px;
+  padding-bottom: 100px;
   background-color: #f6f8fd; }
   .series__title {
     margin: 0;
@@ -1009,6 +1021,156 @@ button,
       width: 15px;
       height: 15px;
       background-image: url("../img/svg/tick.svg"); }
+
+.card-special {
+  position: relative;
+  z-index: 0; }
+  .card-special__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 41px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #231f20;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff; }
+    .card-special__title em {
+      font-style: normal;
+      color: #ff8000; }
+  .card-special__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0 11%;
+    list-style-type: none;
+    counter-reset: num; }
+  .card-special__item {
+    position: relative;
+    width: calc(100% / 3 - 10px);
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-top: 36px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #ffffff; }
+    .card-special__item::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: inline-block;
+      content: "0" counter(num);
+      counter-increment: num;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+    .card-special__item:last-of-type {
+      margin-right: 0; }
+  .card-special .btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    max-width: 250px;
+    padding: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center; }
+  .card-special__text {
+    display: block;
+    margin: 0 auto;
+    max-width: 450px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #ffffff; }
+  .card-special__content {
+    padding: 60px 0; }
+  .card-special__img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 35.15625%; }
+    .card-special__img-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .card-special__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+
+.banner {
+  padding: 65px 0;
+  background: -webkit-gradient(linear, right top, left top, from(#005BFF), to(#A30000));
+  background: linear-gradient(270deg, #005BFF 0%, #A30000 100%); }
+  .banner__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto 30px; }
+  .banner__logo-wrapper {
+    margin-right: 60px; }
+    .banner__logo-wrapper:last-of-type {
+      margin-right: 0; }
+    .banner__logo-wrapper:nth-child(odd) {
+      position: relative; }
+      .banner__logo-wrapper:nth-child(odd)::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: -30px;
+        width: 1px;
+        height: 60px;
+        background-color: #ffffff;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); }
+  .banner__text {
+    margin: 0;
+    font-weight: 600;
+    font-size: 41px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #231f20;
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    line-height: 130%; }
+    .banner__text em {
+      font-style: normal;
+      color: #ff8000; }
+  .banner .btn {
+    max-width: 300px;
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 19px; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
