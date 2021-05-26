@@ -1,0 +1,44 @@
+<h2 class="modal__title">Бесплатный замер</h2>
+<div class="modal__inner">
+
+  <form action="#" method="POST">
+    <div class="custom-input  custom-input--text">
+      <div class="custom-input__wrapper">
+        <label for="name">Имя<sup>*</sup></label>
+        <input type="text" name="name" id="name" placeholder="Иванов Иван" required="">
+        <span class="custom-input__error">Введите имя</span>
+      </div>
+    </div>
+    <div class="custom-input  custom-input--email">
+      <div class="custom-input__wrapper">
+        <label for="tel">Телефон<sup>*</sup></label>
+        <input type="tel" name="tel" id="tel" placeholder="+7 (999) 588-88-88" required="">
+        <span class="custom-input__error">Номер телефона должен состоять из&nbsp;10&nbsp;цифр</span>
+      </div>
+    </div>
+    <div class="input-group input-group--3">
+      <p class="input-group__title">Напишите мне в&nbsp;мессенджер</p>
+      <div class="input-group__wrapper">
+        <div class="custom-checkbox">
+          <input type="checkbox" id="whatsapp" name="whatsapp" value="whatsapp" checked>
+          <label for="whatsapp">WhatsApp</label>
+        </div>
+        <div class="custom-checkbox">
+          <input type="checkbox" id="viber" name="viber" value="viber">
+          <label for="viber">Viber</label>
+        </div>
+        <div class="custom-checkbox">
+          <input type="checkbox" id="telegram" name="telegram" value="telegram">
+          <label for="telegram">Telegram</label>
+        </div>
+      </div>
+
+    </div>
+    <div class="custom-input custom-input--captcha">
+    </div>
+    <button class="btn btn--lg btn--grey" type="submit">Оставить заявку</button>
+    <p class="modal__message">Нажимая на&nbsp;кнопку &laquo;Оставить заявку&raquo;, вы&nbsp;даете согласие
+      на&nbsp;обработку
+      своих <b>персональных данных</b></p>
+  </form>
+</div>
