@@ -1370,8 +1370,8 @@ button,
     cursor: pointer; }
   .modal__content {
     position: relative;
-    width: 600px;
-    padding: 40px;
+    width: 1280px;
+    padding: 50px;
     background-color: #ffffff; }
     @media (max-width: 767px) {
       .modal__content {
@@ -1399,6 +1399,160 @@ button,
     visibility: visible;
     opacity: 1;
     pointer-events: auto; }
+  .modal form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .modal label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #575757; }
+    .modal label sup {
+      color: #e91155; }
+  .modal__message {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0;
+    max-width: 300px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+    color: #575757; }
+  .modal .custom-input {
+    min-width: 300px;
+    margin-right: 30px; }
+    .modal .custom-input__error {
+      display: none; }
+    .modal .custom-input input {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      line-height: 120%;
+      font-weight: 400;
+      outline: 0;
+      background-color: #ecf1f7;
+      border-radius: 2px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      -webkit-transform: background-color 0.3s ease;
+              transform: background-color 0.3s ease; }
+      .modal .custom-input input:hover {
+        background-color: #e1eaf3; }
+      .modal .custom-input input:focus {
+        border: 1px solid #575757;
+        background-color: #ffffff;
+        color: #201600; }
+    .modal .custom-input__wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      padding-bottom: 15px;
+      position: relative; }
+    .modal .custom-input--captcha {
+      width: 300px;
+      height: 74px;
+      background-color: #ededed; }
+  .modal .input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .modal .input-group__title {
+      margin: 0;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+      color: #575757; }
+    .modal .input-group__wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      border: 1px solid #ededed;
+      border-radius: 2px; }
+  .modal .custom-checkbox {
+    padding: 14px;
+    border: 1px solid transparent;
+    border-right: 1px solid #ededed;
+    line-height: 100%;
+    -webkit-transition: border 0.3s ease;
+    transition: border 0.3s ease; }
+    .modal .custom-checkbox:last-of-type {
+      border-right: none; }
+    .modal .custom-checkbox:hover {
+      border: 1px solid #575757;
+      border-radius: 2px; }
+    .modal .custom-checkbox label {
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 120%; }
+    .modal .custom-checkbox input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0; }
+    .modal .custom-checkbox input + label {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+    .modal .custom-checkbox input + label::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      margin-right: 8px;
+      background-color: #ecf1f7;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%; }
+    .modal .custom-checkbox input:checked + label::before {
+      border-color: #44b022;
+      background-color: #44b022;
+      background-image: url("../img/content/check.svg"); }
+  .modal .btn {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 300px;
+    margin-right: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #575757; }
 
 .btn {
   padding: 0;
@@ -2138,23 +2292,6 @@ button,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .help-block__title {
-    margin: 0;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 120%;
-    letter-spacing: 0.01em;
-    color: #231f20;
-    margin-bottom: 10px; }
-  .help-block__text {
-    margin: 0;
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 0.01em;
-    color: #231f20; }
-    .help-block__text:last-of-type {
-      margin-bottom: 0; }
   .help-block--secondary .help-block__content {
     background: -webkit-gradient(linear, left top, right top, color-stop(59.27%, rgba(255, 128, 0, 0.8)), color-stop(132.33%, rgba(255, 192, 0, 0.8)));
     background: linear-gradient(90deg, rgba(255, 128, 0, 0.8) 59.27%, rgba(255, 192, 0, 0.8) 132.33%); }
@@ -2287,6 +2424,8 @@ button,
 
 .calculate {
   padding: 100px 0; }
+  .calculate .layout:first-of-type {
+    margin-bottom: 100px; }
   .calculate__title {
     margin: 0;
     font-weight: 600;
@@ -2298,6 +2437,57 @@ button,
     .calculate__title em {
       font-style: normal;
       color: #ff8000; }
+  .calculate__wrapper {
+    width: 55%;
+    margin-right: 50px;
+    border: 2px solid #f6f8fd; }
+  .calculate .text-block {
+    width: 41.5%; }
+  .calculate__steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    justify-self: flex-end; }
+  .calculate__step {
+    display: inline-block;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f2f2f2; }
+    .calculate__step--active {
+      background-color: #44b022; }
+  .calculate__heading {
+    margin: 0;
+    position: relative;
+    padding: 20px 66px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0.01%, #44b0ff), color-stop(98.44%, #0077cc));
+    background: linear-gradient(90deg, #44b0ff 0.01%, #0077cc 98.44%); }
+    .calculate__heading::before {
+      position: absolute;
+      content: "";
+      width: 26px;
+      height: 30px;
+      top: 50%;
+      left: 30px;
+      background: url("../img/content/icon-steps.svg") no-repeat;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .calculate__text {
+    max-width: 470px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #575757; }
+  .calculate__inner {
+    padding: 20px 30px; }
 
 .slider {
   position: relative;
@@ -2368,6 +2558,25 @@ button,
   .slider .swiper-container {
     margin-right: -680px;
     margin-bottom: 30px; }
+
+.text-block__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #231f20;
+  margin-bottom: 10px; }
+
+.text-block__text {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #231f20; }
+  .text-block__text:last-of-type {
+    margin-bottom: 0; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
