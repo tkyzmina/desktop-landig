@@ -1,75 +1,571 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
   @@include("source/html/base/head.html")
-  <title>Список страниц</title>
-
-  <style>
-    .container {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    h1 {
-      font-size: 24px;
-      line-height: 28px;
-    }
-
-    a {
-      color: rgb(10, 10, 175);
-    }
-
-    li {
-      font-size: 18px;
-      line-height: 22px;
-      margin-bottom: 7px;
-    }
-
-    img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      display: block;
-      margin-bottom: 40px;
-    }
-
-    @media (max-width: 768px) {
-      ol {
-        padding-left: 20px;
-      }
-
-      ol li {
-        margin-bottom: 15px;
-      }
-
-      .container {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-    }
-  </style>
+  <title>Светлые головы — Test task</title>
 
 </head>
+
 <body>
 
-  <main>
-    <div class="container">
-      <img src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта">
-      <h1>Список страниц и компонентов</h1>
-      <ol>
-        <li>
-          <a href="components.html">UI Kit — components.html</a>
-        </li>
-        <li>
-          <a href="main.html">Главная — main.html</a>
-        </li>
-        <li>
-          <a href="#">Название страницы (состояние страницы, если отдельное) — ссылка на страницу</a>
-        </li>
-      </ol>
-    </div>
-  </main>
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
 
+  <div class="wrapper">
+    @@include("source/html/base/header.html", {
+    "main": true,
+    "headerActiveLinkIndex": 1,
+    })
+
+    <main>
+      <section class="promo">
+        <div class="promo__img">
+          <div class="promo__img-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/bg/bg1@1x.webp, img/bg/bg1@2x.webp 2x">
+              <img src="img/bg/bg1@1x.jpg" alt="Изображение роллетных ворот" srcset="img/bg/bg1@2x.jpg 2x" width="1920"
+                height="500">
+            </picture>
+          </div>
+        </div>
+        <div class="promo__wrapper">
+          <div class="promo__content container">
+            <h1 class="promo__title">Роллетные ворота <em>Алютех:</em></h1>
+            <p class="promo__title">гарантия от&nbsp;2-х лет</p>
+            <div class="promo__actions">
+              <button class="btn btn--red btn--lg" type="button" data-modal="measure">Бесплатный замер</button>
+              <div class="promo__pref">
+                <img class="promo__icon" src="img/svg/tools.svg" alt="Изображение инструментов" width="50" height="50">
+                <p class="promo__text">Цельнометаллический профиль</p>
+              </div>
+              <div class="promo__pref">
+                <img class="promo__icon" src="img/svg/shield.svg" alt="Изображение щита" width="50" height="50">
+                <p class="promo__text">Защита <br>
+                  от взлома</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <nav class="page-nav container">
+        <ul class="page-nav__list">
+          <li class="page-nav__item">
+            <a class="page-nav__link page-nav__link--active" href="#">Свойства</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">Серия</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">Решения</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">Вид</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">Управление</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">Аксессуары</a>
+          </li>
+        </ul>
+        <button class="btn btn--transparent" type="button" data-modal="measure">Бесплатный замер</button>
+      </nav>
+      <section class="series">
+        <div class="container">
+          <h2 class="series__title">Серии <em>роллетных ворот</em></h2>
+          <div class="series__card">
+            <div class="series__img">
+              <div class="series__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/content/s1@1x.webp, img/content/s1@2x.webp 2x">
+                  <img src="img/content/s1@1x.jpg" alt="Изображение роллетных ворот" srcset="img/content/s1@2x.jpg 2x"
+                    width="750" height="330">
+                </picture>
+              </div>
+            </div>
+            <div class="series__content">
+              <h3 class="series__card-title">Роллетные ворота серии TREND</h3>
+              <span class="series__text">Доступное решение в&nbsp;базовой комплектации</span>
+              <ul class="series__list">
+                <li class="series__item">По доступной цене</li>
+                <li class="series__item">Сплошной профиль</li>
+                <li class="series__item">Базовая антивандальная защита</li>
+              </ul>
+              <a class="btn btn--transparent btn--lg" href="#">Перейти в&nbsp;серию Trend</a>
+            </div>
+          </div>
+          <div class="series__card series__card--right">
+            <div class="series__img">
+              <div class="series__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/content/s2@1x.webp, img/content/s2@2x.webp 2x">
+                  <img src="img/content/s2@1x.jpg" alt="Изображение роллетных ворот" srcset="img/content/s2@2x.jpg 2x"
+                    width="750" height="330">
+                </picture>
+              </div>
+            </div>
+            <div class="series__content">
+              <h3 class="series__card-title">Роллетные ворота серии PRESTIGE</h3>
+              <span class="series__text">Продукт для особо требовательных хозяев</span>
+              <ul class="series__list">
+                <li class="series__item">P1, Р2&nbsp;класс защиты от&nbsp;взлома</li>
+                <li class="series__item">Сплошной, смотровой и&nbsp;вентиляционный профили</li>
+                <li class="series__item">Для установки в&nbsp;любой проем</li>
+              </ul>
+              <a class="btn btn--transparent btn--lg" href="#">Перейти в&nbsp;серию Prestige</a>
+            </div>
+          </div>
+          <div class="card-special">
+            <div class="card-special__img">
+              <div class="card-special__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/bg/bg2@1x.webp, img/bg/bg2@2x.webp 2x">
+                  <img src="img/bg/bg2@1x.jpg" alt="Изображение автомобиля Audi" srcset="img/bg/bg2@2x.jpg 2x"
+                    width="1280" height="450">
+                </picture>
+              </div>
+            </div>
+            <div class="card-special__content">
+              <h3 class="card-special__title">SECURITY</h3>
+              <ol class="card-special__list">
+                <li class="card-special__item">Максимальная взломостойкость&nbsp;P3</li>
+                <li class="card-special__item">Цельнометаллический профиль с&nbsp;ребрами усиления</li>
+                <li class="card-special__item">Для установки в&nbsp;любой проем</li>
+              </ol>
+              <a class="btn btn--red btn--lg" href="#">Перейти в&nbsp;серию Security</a>
+              <p class="card-special__text">Премиум-продукт для тех, кому важно чувствовать себя в&nbsp;безопасности
+                и&nbsp;комфорте</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="banner">
+        <div class="container">
+          <div class="banner__content">
+            <div class="banner__top">
+              <div class="banner__logo-wrapper">
+                <svg class="banner__logo" width="202" height="50" aria-label="Логотип GateProf">
+                  <use xlink:href="#logo-gate"></use>
+                </svg>
+              </div>
+              <div class="banner__logo-wrapper">
+                <svg class="banner__logo" width="131" height="29" aria-label="Логотип Ozon">
+                  <use xlink:href="#logo-ozon"></use>
+                </svg>
+              </div>
+            </div>
+            <p class="banner__text">До&nbsp;конца месяца при покупке у&nbsp;нас ворот и&nbsp;автоматики получите
+              сертификат
+              в&nbsp;интернет-магазине OZON</p>
+            <a class="btn btn--transparent btn--white btn--lg" href="#">Начать покупки</a>
+          </div>
+        </div>
+      </div>
+      <section class="popular">
+        <div class="container">
+          <h2 class="popular__title">Популярные <em>готовые решения</em></h2>
+          <div class="popular__inner">
+            <div class="product-card">
+              <div class="product-card__top">
+                <div class="product-card__top-tags">
+                  <span class="product-card__tag product-card__tag--blue">TREND</span>
+                  <span class="product-card__tag product-card__tag--yellow">ЭКОНОМ</span>
+                </div>
+                <div class="product-card__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/card-1@1x.webp, img/content/card-1@2x.webp 2x">
+                    <img src="img/content/card-1@1x.jpg" alt="Изображение Роллетные ворота"
+                      srcset="img/content/card-1@2x.jpg 2x" width="400" height="300">
+                  </picture>
+                </div>
+              </div>
+              <div class="product-card__content">
+                <p class="product-card__type">Роллетные ворота</p>
+                <h3 class="product-card__title">
+                  <span>Гаражные секционные ворота Trend</span>
+                  <span>2500&times;2125мм (ширина x&nbsp;высота)</span>
+                </h3>
+                <dl class="product-card__list">
+                  <dt class="product-card__list-title">Тип полотна (рисунок и&nbsp;тиснение панелей):</dt>
+                  <dd class="product-card__list-descr">S-гофр woodgrain</dd>
+                  <dt class="product-card__list-title">Цвет сэндвич-панели с&nbsp;наружной стороны:</dt>
+                  <dd class="product-card__list-descr">RAL9016 Белый<sup>*</sup></dd>
+                  <dt class="product-card__list-title">Цвет сэндвич-панели с&nbsp;внутренней стороны:</dt>
+                  <dd class="product-card__list-descr">RAL9016 Белый<sup>*</sup></dd>
+                  <dt class="product-card__list-title product-card__list-title--confirm">Засов в комплекте</dt>
+                  <dd class="product-card__list-descr"></dd>
+                </dl>
+                <div class="product-card__bottom">
+                  <p class="product-card__price">54&thinsp;595&nbsp;₽</p>
+                  <a class="btn btn--transparent" href="#" data-modal="measure">Зарезервировать</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__top">
+                <div class="product-card__top-tags">
+                  <span class="product-card__tag product-card__tag--red">PRESTIGE</span>
+                  <span class="product-card__tag product-card__tag--yellow">ХИТ ПРОДАЖ</span>
+                </div>
+                <div class="product-card__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/card-2@1x.webp, img/content/card-2@2x.webp 2x">
+                    <img src="img/content/card-2@1x.jpg" alt="Изображение Роллетные ворота"
+                      srcset="img/content/card-2@2x.jpg 2x" width="400" height="300">
+                  </picture>
+                </div>
+              </div>
+              <div class="product-card__content">
+                <p class="product-card__type">Роллетные ворота</p>
+                <h3 class="product-card__title">
+                  <span>Гаражные секционные ворота Trend</span>
+                  <span>2500&times;2125мм (ширина x&nbsp;высота)</span>
+                </h3>
+                <dl class="product-card__list">
+                  <dt class="product-card__list-title">Тип полотна (рисунок и&nbsp;тиснение панелей):</dt>
+                  <dd class="product-card__list-descr">S-гофр woodgrain</dd>
+                  <dt class="product-card__list-title">Цвет сэндвич-панели с&nbsp;наружной стороны:</dt>
+                  <dd class="product-card__list-descr">RAL9016 Белый<sup>*</sup></dd>
+                  <dt class="product-card__list-title">Цвет сэндвич-панели с&nbsp;внутренней стороны:</dt>
+                  <dd class="product-card__list-descr">RAL9016 Белый<sup>*</sup></dd>
+                  <dt class="product-card__list-title product-card__list-title--confirm">Засов в комплекте</dt>
+                  <dd class="product-card__list-descr"></dd>
+                </dl>
+                <div class="product-card__bottom">
+                  <p class="product-card__price">60&thinsp;306&nbsp;₽</p>
+                  <a class="btn btn--transparent" href="#" data-modal="measure">Зарезервировать</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__top">
+                <div class="product-card__top-tags">
+                  <span class="product-card__tag product-card__tag--black">SECURITY</span>
+                  <span class="product-card__tag product-card__tag--purple">VIP</span>
+                </div>
+                <div class="product-card__bottom-tag">
+                  <span class="product-card__btag product-card__btag--time">00:00:07</span>
+                  <span class="product-card__btag product-card__btag--quantity">Осталась 1 шт.</span>
+                </div>
+                <div class="product-card__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/card-3@1x.webp, img/content/card-3@2x.webp 2x">
+                    <img src="img/content/card-3@1x.jpg" alt="Изображение Роллетные ворота"
+                      srcset="img/content/card-3@2x.jpg 2x" width="400" height="300">
+                  </picture>
+                </div>
+              </div>
+              <div class="product-card__content">
+                <p class="product-card__type">Роллетные ворота</p>
+                <h3 class="product-card__title">
+                  <span>Гаражные секционные ворота Trend</span>
+                  <span>2500&times;2125мм (ширина x&nbsp;высота)</span>
+                </h3>
+                <dl class="product-card__list">
+                  <dt class="product-card__list-title">Тип полотна (рисунок и&nbsp;тиснение панелей):</dt>
+                  <dd class="product-card__list-descr">S-гофр woodgrain</dd>
+                  <dt class="product-card__list-title">Цвет сэндвич-панели с&nbsp;наружной стороны:</dt>
+                  <dd class="product-card__list-descr">RAL9016 Белый<sup>*</sup></dd>
+                  <dt class="product-card__list-title">Цвет сэндвич-панели с&nbsp;внутренней стороны:</dt>
+                  <dd class="product-card__list-descr">RAL9016 Белый<sup>*</sup></dd>
+                  <dt class="product-card__list-title product-card__list-title--confirm">Засов в комплекте</dt>
+                  <dd class="product-card__list-descr"></dd>
+                </dl>
+                <div class="product-card__bottom">
+                  <p class="product-card__price">70&thinsp;276&nbsp;₽</p>
+                  <a class="btn btn--transparent" href="#" data-modal="measure">Зарезервировать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="help-block">
+            <div class="help-block__moto">
+              <div class="help-block__img">
+                <div class="help-block__img-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/help@1x.webp, img/content/help@2x.webp 2x">
+                    <img src="img/content/help@1x.jpg" alt="Изображение приборной панели автомобиля"
+                      srcset="img/content/help@2x.jpg 2x" width="840" height="300">
+                  </picture>
+                </div>
+              </div>
+              <div class="help-block__content">
+                <p class="help-block__heading">Не&nbsp;нашли свой вариант?</p>
+                <span class="help-block__second-text">Наш специалист поможет вам с&nbsp;выбором в&nbsp;течении
+                  5&nbsp;минут</span>
+                <a class="btn btn--transparent btn--white" href="#" data-modal="measure">Подобрать</a>
+              </div>
+            </div>
+            <div class="text-block">
+              <h3 class="text-block__title">Загловок 2 уровня</h3>
+              <p class="text-block__text">От&nbsp;выбора гаражных ворот зависит теплоизоляция помещения
+                и&nbsp;его
+                безопасность. Гараж должен обеспечивать микроклимат, благоприятный для деталей автомобиля, поэтому
+                прежде,
+                чем купить гаражные ворота, нужно убедиться в&nbsp;их&nbsp;функциональности.</p>
+              <p class="text-block__text">От&nbsp;выбора гаражных ворот зависит теплоизоляция помещения
+                и&nbsp;его
+                безопасность. Гараж должен обеспечивать микроклимат, благоприятный для деталей автомобиля, поэтому
+                прежде,
+                чем купить гаражные ворота, нужно убедиться в&nbsp;их&nbsp;функциональности.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="warranty container">
+        <h2 class="warranty__title">Предоставляем гарантийное <em>сервисное обслуживание</em></h2>
+        <div class="warranty__inner">
+          <div class="warranty__main">
+            <p class="warranty__time"><em>2</em> года</p>
+            <p class="warranty__text">Безусловная гарантия на&nbsp;все автоматические ворота GateProf</p>
+            <svg class="warranty__icon-bg warranty__icon-bg--white" width="105" height="151">
+              <use xlink:href="#icon-shield-bg"></use>
+            </svg>
+          </div>
+          <div class="warranty__secondary">
+            <p class="warranty__text warranty__text--black">Расширенная гарантия на&nbsp;все секционные ворота GateProf
+            </p>
+            <a class="warranty__link" href="#" data-modal="measure">
+              <span>Узнать подробнее</span>
+              <svg class="warranty__icon" width="8" height="14">
+                <use xlink:href="#icon-arrow"></use>
+              </svg>
+              <svg class="warranty__icon-bg" width="105" height="151">
+                <use xlink:href="#icon-shield-bg"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="calculate">
+        <div class="container">
+          <h2 class="calculate__title">Расчет стоимости <em>роллетных ворот</em></h2>
+          <div class="layout">
+            <div class="calculate__wrapper">
+              <h3 class="calculate__heading">Узнайте стоимость индивидуальных роллетные ворот</h3>
+              <div class="calculate__inner">
+                <p class="calculate__text">Всего 6&nbsp;вопросов и&nbsp;мы&nbsp;подберем ворота вашей мечты. Укажите
+                  ваши
+                  контакты и&nbsp;параметры ворот в&nbsp;Квиз-форме.</p>
+                <form action="#">
+                </form>
+                <div class="calculate__steps">
+                  <span class="calculate__step calculate__step--active"></span>
+                  <span class="calculate__step"></span>
+                  <span class="calculate__step"></span>
+                  <span class="calculate__step"></span>
+                  <span class="calculate__step"></span>
+                </div>
+              </div>
+            </div>
+            <div class="text-block">
+              <h3 class="text-block__title">Заголовок для SEO</h3>
+              <p class="text-block__text">От&nbsp;выбора гаражных ворот зависит теплоизоляция помещения и&nbsp;его
+                безопасность. Гараж должен обеспечивать микроклимат, благоприятный для деталей автомобиля, поэтому
+                прежде, чем купить гаражные ворота, нужно убедиться в&nbsp;их&nbsp;функциональности.</p>
+              <p class="text-block__text">От&nbsp;выбора гаражных ворот зависит теплоизоляция помещения и&nbsp;его
+                безопасность. Гараж должен обеспечивать микроклимат, благоприятный для деталей автомобиля, поэтому
+                прежде, чем купить гаражные ворота, нужно убедиться в&nbsp;их&nbsp;функциональности.</p>
+            </div>
+          </div>
+          <div class="layout">
+            <div class="help-block help-block--md help-block--secondary">
+              <div class="help-block__moto">
+                <div class="help-block__img">
+                  <div class="help-block__img-wrapper">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/help-2@1x.webp, img/content/help-2@2x.webp 2x">
+                      <img src="img/content/help-2@1x.jpg" alt="Изображение приборной панели автомобиля"
+                        srcset="img/content/help-2@2x.jpg 2x" width="840" height="300">
+                    </picture>
+                  </div>
+                </div>
+                <div class="help-block__content">
+                  <p class="help-block__heading">Выезд инженера-замерщика в&nbsp;течение 48&nbsp;часов?</p>
+                  <a class="btn btn--transparent btn--white" href="#" data-modal="measure">Вызвать замерщика</a>
+                </div>
+              </div>
+            </div>
+            <div class="help-block help-block--sm">
+              <div class="help-block__moto">
+                <div class="help-block__img">
+                  <div class="help-block__img-wrapper">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/help-3@1x.webp, img/content/help-3@2x.webp 2x">
+                      <img src="img/content/help-3@1x.jpg" alt="Изображение приборной панели автомобиля"
+                        srcset="img/content/help-3@2x.jpg 2x" width="840" height="300">
+                    </picture>
+                  </div>
+                </div>
+                <div class="help-block__content">
+                  <p class="help-block__heading">Торопитесь?</p>
+                  <p class="help-block__heading">Получите КП&nbsp;за&nbsp;3&nbsp;часа</p>
+                  <a class="btn btn--transparent btn--white" href="#" data-modal="measure">Получить предложение</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slider">
+        <div class="container">
+          <div class="slider__top">
+            <h2 class="slider__title">Дополнительные аксессуары для <em>роллетных ворот</em></h2>
+            <div class="slider__controls">
+              <div class="slider__btn slider__btn--prev" tabindex="1">
+                <svg class="slider__icon" width="8" height="14">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </div>
+              <div class="slider__btn slider__btn--next" tabindex="1">
+                <svg class="slider__icon" width="8" height="14">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__img">
+                      <picture>
+                        <source type="image/webp" srcset="img/slides/slide-1@1x.webp, img/slides/slide-1@2x.webp 2x">
+                        <img src="img/slides/slide-1@1x.jpg" alt="Изображение Системы Чувствительный край"
+                          srcset="img/slides/slide-1@2x.jpg 2x" width="400" height="300">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <p class="product-card__type">Роллетные ворота</p>
+                    <h3 class="product-card__title">
+                      <span>Система &laquo;Чувствительный край&raquo;</span>
+                    </h3>
+                    <p class="product-card__descr">При соприкосновении с&nbsp;препятствием система останавливает
+                      движение полотна, а&nbsp;затем меняет
+                      его на&nbsp;противоположное</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__img">
+                      <picture>
+                        <source type="image/webp" srcset="img/slides/slide-2@1x.webp, img/slides/slide-2@2x.webp 2x">
+                        <img src="img/slides/slide-2@1x.jpg" alt="Изображение Система аварийного подъема"
+                          srcset="img/slides/slide-2@2x.jpg 2x" width="400" height="300">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <p class="product-card__type">Роллетные ворота</p>
+                    <h3 class="product-card__title">
+                      <span>Система аварийного подъема</span>
+                    </h3>
+                    <p class="product-card__descr">Съемный ручной привод для экстренного открытия ворот при отключении
+                      электроэнергии</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__img">
+                      <picture>
+                        <source type="image/webp" srcset="img/slides/slide-3@1x.webp, img/slides/slide-3@2x.webp 2x">
+                        <img src="img/slides/slide-3@1x.jpg" alt="Изображение Система блокировки аварийного открывания"
+                          srcset="img/slides/slide-3@2x.jpg 2x" width="400" height="300">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <p class="product-card__type">Роллетные ворота</p>
+                    <h3 class="product-card__title">
+                      <span>Система блокировки аварийного открывания</span>
+                    </h3>
+                    <p class="product-card__descr">Обеспечивает защиту от несанкционированного использования аварийного
+                      ручного подъема</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__img">
+                      <picture>
+                        <source type="image/webp" srcset="img/slides/slide-4@1x.webp, img/slides/slide-4@2x.webp 2x">
+                        <img src="img/slides/slide-4@1x.jpg" alt="Изображение Фотоэлементы LM-L"
+                          srcset="img/slides/slide-4@2x.jpg 2x" width="400" height="300">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <p class="product-card__type">Роллетные ворота</p>
+                    <h3 class="product-card__title">
+                      <span>Фотоэлементы LM-L</span>
+                    </h3>
+                    <p class="product-card__descr">Релейный выход с&nbsp;нормально-закрытым и&nbsp;нормально-открытым
+                      контактами (NC/NO)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__top">
+                    <div class="product-card__img">
+                      <picture>
+                        <source type="image/webp" srcset="img/slides/slide-5@1x.webp, img/slides/slide-5@2x.webp 2x">
+                        <img src="img/slides/slide-5@1x.jpg" alt="Изображение Пульт дистанционного управления"
+                          srcset="img/slides/slide-5@2x.jpg 2x" width="400" height="300">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="product-card__content">
+                    <p class="product-card__type">Роллетные ворота</p>
+                    <h3 class="product-card__title">
+                      <span>Пульт дистанционного управления 4к. АТ-4</span>
+                    </h3>
+                    <p class="product-card__descr">Съемный ручной привод для экстренного открытия ворот при отключении
+                      электроэнергии</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
+        <p><a href="#" data-modal="success">modal--success link</a></p> -->
+      </div>
+    </main>
+
+    @@include("source/html/base/footer.html")
+
+    @@include("source/html/base/modal.html", {
+    "name": "feedback"
+    })
+
+    @@include("source/html/base/modal.html", {
+    "name": "measure"
+    })
+
+    @@include("source/html/base/modal.html", {
+    "name": "success",
+    "fitContent": true,
+    "noScale": true,
+    "mod": "some-mod"
+    })
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
+
 </html>
