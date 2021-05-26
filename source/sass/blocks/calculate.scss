@@ -1,8 +1,78 @@
 .calculate {
   padding: 100px 0;
 
+  .layout {
+    &:first-of-type {
+      margin-bottom: 100px;
+    }
+  }
+
   &__title {
     @include h2;
     margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    width: 55%;
+    margin-right: 50px;
+    border: 2px solid $color-alice-blue;
+  }
+
+  .text-block {
+    width: 41.5%;
+  }
+
+  &__steps {
+    display: flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+
+  &__step {
+    display: inline-block;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $color-gray-2;
+
+    &--active {
+      background-color: $color-green;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    position: relative;
+    padding: 20px 66px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: $color-default-white;
+    background: linear-gradient(90deg, #44b0ff 0.01%, #0077cc 98.44%);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 26px;
+      height: 30px;
+      top: 50%;
+      left: 30px;
+      background: url("../img/content/icon-steps.svg") no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__text {
+    max-width: 470px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: $color-gray-1;
+  }
+
+  &__inner {
+    padding: 20px 30px;
   }
 }
