@@ -91,4 +91,27 @@
       margin-bottom: 0;
     }
   }
+
+  &--secondary {
+    .help-block__content {
+      background: linear-gradient(90deg, rgba(255, 128, 0, 0.8) 59.27%, rgba(255, 192, 0, 0.8) 132.33%);
+    }
+  }
+
+  &--md {
+    width: 55%;
+    margin-right: 50px;
+
+    .help-block__content {
+      max-width: 68%;
+    }
+  }
+
+  &--sm {
+    width: 41.5%;
+
+    .help-block__content {
+      max-width: 70%;
+    }
+  }
 }

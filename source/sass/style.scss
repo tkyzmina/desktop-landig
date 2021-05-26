@@ -2,7 +2,7 @@
 //---------------------------------
 
 @import "vendor/normalize";
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 //---------------------------------
@@ -30,6 +30,9 @@
 @import "blocks/popular";
 @import "blocks/product-card";
 @import "blocks/help-block";
+@import "blocks/warranty";
+@import "blocks/calculate";
+@import "blocks/slider";
 
 
 // используйте это для отключения ховеров на тач устройствах

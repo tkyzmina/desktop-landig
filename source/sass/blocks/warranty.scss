@@ -1,0 +1,132 @@
+.warranty {
+  padding-top: 100px;
+
+  &__title {
+    @include h2;
+    max-width: 50%;
+    margin-bottom: 30px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__main {
+    position: relative;
+    width: 55%;
+    margin-right: 50px;
+    padding: 20px 30px;
+    background: linear-gradient(90deg, #0077cc 0%, #44b0ff 100%);
+  }
+
+  &__secondary {
+    position: relative;
+    width: 41.5%;
+    padding: 20px 30px;
+    background-color: #f6f8fd;
+    overflow: hidden;
+  }
+
+  &__icon-bg {
+    position: absolute;
+    bottom: -22px;
+    right: -40px;
+    fill: $color-blue-2;
+    fill-opacity: 0.1;
+
+    &--white {
+      fill: $color-default-white;
+      fill-opacity: 0.2;
+    }
+  }
+
+  &__time {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: $color-default-white;
+
+    em {
+      font-weight: 250;
+      font-size: 106px;
+      line-height: 120%;
+      font-style: normal;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 300px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: $color-default-white;
+
+    &--black {
+      position: relative;
+      margin-bottom: 15px;
+      padding-top: 123px;
+      color: $color-black;
+
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 55px;
+        left: 0;
+        background: url("../img/svg/infinity.svg");
+        width: 123px;
+        height: 123px;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: $color-blue-2;
+    cursor: pointer;
+    transition: color $default-transition-settings;
+
+    span {
+      margin-right: 10px;
+    }
+
+    &:hover,
+    &:focus,
+    &:hover .warranty__icon,
+    &:focus .warranty__icon {
+      color: $color-blue;
+      fill: $color-blue;
+      outline: none;
+    }
+
+    &:active,
+    &:active .warranty__icon {
+      color: $color-blue-2;
+      fill: $color-blue-2;
+    }
+  }
+
+  &__icon {
+    fill: $color-blue-2;
+    transition: fill $default-transition-settings;
+  }
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+
+  .help-block__moto {
+    width: 100%;
+    margin-right: 0;
+  }
+}

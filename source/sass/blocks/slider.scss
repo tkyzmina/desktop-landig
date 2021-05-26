@@ -1,0 +1,10 @@
+.slider {
+  padding: 100px 0;
+  background-color: $color-alice-blue;
+
+  &__title {
+    @include h2;
+    max-width: 50%;
+    margin-bottom: 30px;
+  }
+}

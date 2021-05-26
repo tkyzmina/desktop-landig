@@ -94,6 +94,14 @@
     color: $color-black;
   }
 
+  &__descr {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: $color-black;
+  }
+
   &__bottom {
     display: flex;
     align-items: flex-start;
