@@ -382,13 +382,23 @@
       </section>
       <section class="slider">
         <div class="container">
-          <h2 class="slider__title">Дополнительные аксессуары для <em>роллетных ворот</em></h2>
-
-          <!-- Slider main container -->
+          <div class="slider__top">
+            <h2 class="slider__title">Дополнительные аксессуары для <em>роллетных ворот</em></h2>
+            <div class="slider__controls">
+              <div class="slider__btn slider__btn--prev" tabindex="1">
+                <svg class="slider__icon" width="8" height="14">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </div>
+              <div class="slider__btn slider__btn--next" tabindex="1">
+                <svg class="slider__icon" width="8" height="14">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
           <div class="swiper-container">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
               <div class="swiper-slide">
                 <div class="product-card">
                   <div class="product-card__top">
@@ -433,7 +443,6 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <!-- Slide 3 -->
                 <div class="product-card">
                   <div class="product-card__top">
                     <div class="product-card__img">
@@ -455,7 +464,6 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <!-- Slide 4 -->
                 <div class="product-card">
                   <div class="product-card__top">
                     <div class="product-card__img">
@@ -477,7 +485,6 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <!-- Slide 5 -->
                 <div class="product-card">
                   <div class="product-card__top">
                     <div class="product-card__img">
@@ -499,19 +506,8 @@
                 </div>
               </div>
             </div>
-
-
-            <div class="slider__controls">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-
-
-
           </div>
-
         </div>
-
       </section>
 
 
@@ -519,14 +515,14 @@
 
 
       <div class="container">
-        <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-modal="success">modal--success link</a></p>
+        <!-- <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
+        <p><a href="#" data-modal="success">modal--success link</a></p> -->
       </div>
     </main>
 
     @@include("source/html/base/footer.html")
 
-    @@include("source/html/base/modal.html", {
+    <!-- @@include("source/html/base/modal.html", {
     "name": "feedback"
     })
 
@@ -535,7 +531,7 @@
     "fitContent": true,
     "noScale": true,
     "mod": "some-mod"
-    })
+    }) -->
   </div>
 
   <script src="js/vendor.min.js"></script>

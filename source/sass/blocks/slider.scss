@@ -1,10 +1,83 @@
 .slider {
+  position: relative;
   padding: 100px 0;
   background-color: $color-alice-blue;
 
   &__title {
     @include h2;
     max-width: 50%;
+    margin-bottom: 30px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__controls {
+    display: flex;
+  }
+
+  &__btn {
+    position: relative;
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid $color-gray-2;
+    cursor: pointer;
+    transition: background-color $default-transition-settings;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &--prev {
+      .slider__icon {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+
+    &--next {
+      .slider__icon {
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-gray-4;
+
+      .slider__icon {
+        fill: $color-green;
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+
+      .slider__icon {
+        fill: $color-gray-5;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    fill: $color-gray-5;
+    transition: fill $default-transition-settings;
+  }
+
+  .product-card {
+    min-height: 450px;
+  }
+
+  .swiper-container {
+    margin-right: -680px;
     margin-bottom: 30px;
   }
 }

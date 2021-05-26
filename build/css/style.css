@@ -1238,9 +1238,80 @@ button,
     display: none; }
 
 .footer {
-  min-height: 100px;
-  padding: 0 60px;
-  background-color: #44b0ff; }
+  min-height: 200px;
+  background-color: #f6f8fd; }
+  .footer__block--top {
+    padding-bottom: 19px;
+    border-bottom: 1px solid #ededed; }
+  .footer__block--bottom {
+    padding: 30px 0; }
+  .footer__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .footer__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 20px;
+    width: calc(100% / 4 - 70px); }
+    .footer__item:last-of-type {
+      margin-right: 0; }
+  .footer__text {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #ff8000; }
+  .footer__link {
+    font-size: 18px;
+    line-height: 21px;
+    color: #44b0ff;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
+    .footer__link:hover, .footer__link:focus {
+      opacity: 0.8; }
+    .footer__link:active {
+      opacity: 1; }
+    .footer__link--extd {
+      font-size: 20px;
+      line-height: 23px; }
+  .footer__bott-link {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #575757;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
+    .footer__bott-link span {
+      border-bottom: 1px solid #575757; }
+    .footer__bott-link:hover, .footer__bott-link:focus {
+      opacity: 0.8; }
+    .footer__bott-link:active {
+      opacity: 1; }
+  .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .footer__social-link {
+    margin-right: 15px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
+    .footer__social-link:hover, .footer__social-link:focus {
+      opacity: 0.8; }
+    .footer__social-link:active {
+      opacity: 1; }
 
 .modal {
   position: fixed;
@@ -2229,6 +2300,7 @@ button,
       color: #ff8000; }
 
 .slider {
+  position: relative;
   padding: 100px 0;
   background-color: #f6f8fd; }
   .slider__title {
@@ -2243,6 +2315,59 @@ button,
     .slider__title em {
       font-style: normal;
       color: #ff8000; }
+  .slider__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .slider__controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .slider__btn {
+    position: relative;
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; }
+    .slider__btn:last-of-type {
+      margin-right: 0; }
+    .slider__btn--prev .slider__icon {
+      -webkit-transform: translate(-50%, -50%) rotate(180deg);
+              transform: translate(-50%, -50%) rotate(180deg); }
+    .slider__btn--next .slider__icon {
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    .slider__btn:hover, .slider__btn:focus {
+      background-color: #ededed; }
+      .slider__btn:hover .slider__icon, .slider__btn:focus .slider__icon {
+        fill: #44b022; }
+    .slider__btn:active {
+      background-color: transparent; }
+      .slider__btn:active .slider__icon {
+        fill: #8f8f8f; }
+  .slider__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    fill: #8f8f8f;
+    -webkit-transition: fill 0.3s ease;
+    transition: fill 0.3s ease; }
+  .slider .product-card {
+    min-height: 450px; }
+  .slider .swiper-container {
+    margin-right: -680px;
+    margin-bottom: 30px; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
